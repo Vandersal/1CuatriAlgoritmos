@@ -1,0 +1,3 @@
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Dados/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Dados/cmake-build-debug/CMakeFiles/Dados.dir
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Dados/cmake-build-debug/CMakeFiles/rebuild_cache.dir

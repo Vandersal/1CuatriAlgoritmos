@@ -1,0 +1,3 @@
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Funciones2/cmake-build-debug/CMakeFiles/Funciones2.dir
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Funciones2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahira/Documents/IDS/1Cuatri/Algoritmos/Funciones2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
