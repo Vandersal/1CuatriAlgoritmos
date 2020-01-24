@@ -6,6 +6,7 @@ using namespace std;
 void solicitarDatos();
 void verificadorDados();
 void tirada();
+void ganador_perdedor();
 //Variables
 int dado1, dado2, resultadoTirada;
 int contadorPuntos;
@@ -16,7 +17,7 @@ int main() {
 }
 
 void solicitarDatos(){
-    cout<<"Bienvenido"<<endl;
+    cout<<"\nBienvenido"<<endl;
     cout<<"Por favor, ingresa la cara del dado 1: ";
     cin>>dado1;
     cout<<"\nPor favor, ingresa la cara del dado 2: ";
@@ -46,11 +47,13 @@ void tirada(){
         cout<<"Tu puntaje ahora es: "<<contadorPuntos<<" !!"<<endl;
         solicitarDatos();
     }
+    ganador_perdedor();
+}
+void ganador_perdedor(){
     if (resultadoTirada == 7 | resultadoTirada == 11){
         cout<<"Felicidades, has ganado"<<endl;
 
     } else if(resultadoTirada == 2 | resultadoTirada == 3 | resultadoTirada == 5 | resultadoTirada == 12){
         cout<<"Lo sentimos, perdiste :c"<<endl;
     }
-
 }
