@@ -4,6 +4,7 @@ using namespace std;
 
 int edad, enfermedad, opcionServicio;
 int gastoTotalDia, gastoTotal, gastoEnfermedad, dias, diaServicio, gastoServicio;
+int cuenta;
 string nombrePaciente;
 
 void datosPaciente();
@@ -103,41 +104,77 @@ void servicioAdicional(){
     cout<<"4. Ningun servicio"<<endl;
     cout<<"Servicio: ";
     cin>>opcionServicio;
+    
     switch (opcionServicio){
+
         case 1:
-            cout<<"Tu paciente tuvo examen de laboratorio :c"<<endl;
+            cout<<"\nTu paciente tuvo examen de laboratorio :c"<<endl;
             cout<<"Por cuantos dias tuvo el servicio? ";
             cin>>diaServicio;
             if(diaServicio < 0 ){
                 cout<<"Error, dias invalidos"<<endl;
             }else {
-                gastoServicio = 150 * diaServicio;
-                gastoTotal = (gastoTotalDia * dias) + (gastoServicio);
-                cout<<"El costo total a pagar por dia sin servicios extra es: "<<gastoEnfermedad<<" pesos :)"<<endl;
-                cout<<"El costo total a pagar es: "<<gastoTotal<<" pesos :)"<<endl;
+                if(diaServicio <= dias) {
+                    gastoServicio = 150 * diaServicio;
+                    gastoTotal = gastoEnfermedad * dias;
+                    cuenta = gastoTotal + gastoServicio;
+                    cout << "El costo total a pagar por dia sin servicios extra es: " << gastoEnfermedad << " pesos :)"
+                         << endl;
+                    cout << "El costo total a pagar es: " << cuenta << " pesos :)" << endl;
+
+                }else{
+                    cout<<"Los dias no tienen coherencia"<<endl;
+                }
             }
 
             break;
         case 2:
-            cout<<"Tu paciente tuvo atencion especial"<<endl;
-            gastoTotalDia = gastoEnfermedad + 200;
-            gastoTotal = gastoTotalDia * dias;
-            cout<<"El costo total a pagar por dia es: "<<gastoTotalDia<<" pesos :)"<<endl;
+            cout<<"\nTu paciente tuvo atencion especial :c"<<endl;
+            cout<<"Por cuantos dias tuvo el servicio? ";
+            cin>>diaServicio;
+            if(diaServicio < 0 ){
+                cout<<"Error, dias invalidos"<<endl;
+            }else {
+                if(diaServicio <= dias) {
+                    gastoServicio = 200 * diaServicio;
+                    gastoTotal = gastoEnfermedad * dias;
+                    cuenta = gastoTotal + gastoServicio;
+                    cout << "El costo total a pagar por dia sin servicios extra es: " << gastoEnfermedad << " pesos :)"
+                         << endl;
+                    cout << "El costo total a pagar es: " << cuenta << " pesos :)" << endl;
+
+                }else{
+                    cout<<"Los dias no tienen coherencia"<<endl;
+                }
+            }
 
             break;
         case 3:
-            cout<<"Tu paciente tuvo una consulta externa"<<endl;
-            gastoTotalDia = gastoEnfermedad + 500;
-            gastoTotal = gastoTotalDia * dias;
-            cout<<"El costo total a pagar por dia es: "<<gastoTotalDia<<" pesos :)"<<endl;
-            cout<<"El costo total a pagar es: "<<gastoTotal<<" pesos :)"<<endl;
+            cout<<"\nTu paciente tuvo consulta medica externa :c"<<endl;
+            cout<<"Por cuantos dias tuvo el servicio? ";
+            cin>>diaServicio;
+            if(diaServicio < 0 ){
+                cout<<"Error, dias invalidos"<<endl;
+            }else {
+                if(diaServicio <= dias) {
+                    gastoServicio = 500 * diaServicio;
+                    gastoTotal = gastoEnfermedad * dias;
+                    cuenta = gastoTotal + gastoServicio;
+                    cout << "El costo total a pagar por dia sin servicios extra es: " << gastoEnfermedad << " pesos :)"
+                         << endl;
+                    cout << "El costo total a pagar es: " << cuenta << " pesos :)" << endl;
+
+                }else{
+                    cout<<"Los dias no tienen coherencia"<<endl;
+                }
+            }
 
             break;
         case 4:
             gastoTotalDia = gastoEnfermedad;
-            gastoTotal = gastoTotalDia * dias;
+            cuenta = gastoTotalDia * dias;
             cout<<"El costo total a pagar por dia es: "<<gastoTotalDia<<" pesos :)"<<endl;
-            cout<<"El costo total a pagar es: "<<gastoTotal<<" pesos :)"<<endl;
+            cout<<"El costo total a pagar es: "<<cuenta<<" pesos :)"<<endl;
 
             break;
         default:
