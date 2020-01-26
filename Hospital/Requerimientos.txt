@@ -1,0 +1,12 @@
+En un hospital se obtuvo un costo promedio diario de un paciente que requirio ser internado, este costo depende del tipo de enfermedad del paciente.
+Para pacientes de 12 años de edad o menos se realiza un cobro adicional para las enfermedades 2 y 3.
+Cualquier paciente puede requerir un servicio adicional(examenes de laboratorio, atencion especial y o consulta externa(otro medico) )
+
+Tipo de enfermedad	| Costo/Dia	| 
+	1			2500	
+	2			1600
+	3			1000
+
+Se requiere calcular e imprimir el costo total a pagar del paciente
+
+
