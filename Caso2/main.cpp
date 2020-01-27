@@ -86,12 +86,12 @@ void paqueteInternetCasa5GB(){
     cout<<"Opcion: ";
     cin>>opcionGB;
 
-    if(opcionDispo <0 && opcionGB < 0){
+    if(opcionDispo <1 && opcionGB < 1){
         cout<<"Datos invalidos"<<endl;
         menuInternet();
     }else{
 
-        if(opcionDispo < 0 || opcionGB <0 ){
+        if(opcionDispo < 1 || opcionGB <1 ){
             cout<<"Datos invalidos"<<endl;
             menuInternet();
         }else{
@@ -117,12 +117,12 @@ void paqueteInternetCasa10GB(){
     cout<<"Opcion: ";
     cin>>opcionGB;
 
-    if(opcionDispo <0 && opcionGB < 0){
+    if(opcionDispo <1 && opcionGB < 1){//Checar la condicion
         cout<<"Datos invalidos"<<endl;
         menuInternet();
     }else{
 
-        if(opcionDispo < 0 || opcionGB <0 ){
+        if(opcionDispo < 1 || opcionGB <1 ){
             cout<<"Datos invalidos"<<endl;
             menuInternet();
         }else{
