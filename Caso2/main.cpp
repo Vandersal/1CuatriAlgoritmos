@@ -14,7 +14,9 @@ int opcionDispo, opcionGB;
 void menuPrincipal();
 void menuInternet();
 void paqueteInternetCasa5GB();
+void paqueteInternetCasa10GB();
 void limiteDispositivos5GB();
+void limiteDispositivos10GB();
 void limiteGB();
 
 int main() {
@@ -35,6 +37,7 @@ void menuPrincipal(){
     cout << "\n";
     switch (opcionMenuPrincipal){
         case 1:
+            cout<<"Opcion de telefonia"<<endl;
             break;
         case 2:
             menuInternet();
@@ -62,7 +65,7 @@ void menuInternet(){
             paqueteInternetCasa5GB();
             break;
         case 2:
-
+            paqueteInternetCasa10GB();
             break;
         case 3:
             menuPrincipal();
@@ -98,10 +101,44 @@ void paqueteInternetCasa5GB(){
             if(opcionGB == 1){
                 limiteGB();
             }
+            if(opcionDispo == 2 && opcionGB == 2){
+                cout<<"Se le agendara una cita para que un tecnico visite su domicilio, muchas gracias"<<endl;
+            }
         }
 
     }
 }//Funcion terminada
+
+void paqueteInternetCasa10GB(){
+    cout<<"\nConoce cuantos dispositivos se encuentran concectados? (1 = SI y 2 = NO)"<<endl;
+    cout<<"Opcion: ";
+    cin>>opcionDispo;
+    cout<<"\nConoce el consumo de datos? (1 = SI y 2 = NO)"<<endl;
+    cout<<"Opcion: ";
+    cin>>opcionGB;
+
+    if(opcionDispo <0 && opcionGB < 0){
+        cout<<"Datos invalidos"<<endl;
+        menuInternet();
+    }else{
+
+        if(opcionDispo < 0 || opcionGB <0 ){
+            cout<<"Datos invalidos"<<endl;
+            menuInternet();
+        }else{
+            if(opcionDispo == 1){
+                limiteDispositivos10GB();
+            }
+            if(opcionGB == 1){
+                limiteGB();
+            }
+            if(opcionDispo == 2 && opcionGB == 2){
+                cout<<"Se le agendara una cita para que un tecnico visite su domicilio, muchas gracias"<<endl;
+            }
+        }
+
+    }
+}
 
 void limiteDispositivos5GB(){
     cout<<"\nCuantos dispositivos se encuentran conectados a la red?"<<endl;
@@ -121,6 +158,25 @@ void limiteDispositivos5GB(){
         }
     }
 }//Funcion terminada
+
+void limiteDispositivos10GB(){
+    cout<<"\nCuantos dispositivos se encuentran conectados a la red?"<<endl;
+    cout<<"Opcion: ";
+    cin>>dispositivosConectados;
+
+    if (dispositivosConectados <0){
+        cout<<"Error, opcion no valida"<<endl;
+        menuInternet();
+    }else {
+
+        if(dispositivosConectados < 6){
+            cout<<"El usuario no excede la cantidad de dispositivos"<<endl;
+
+        }else {
+            cout<<"El usuario tiene mas de los dispositivos permitidos "<<endl;
+        }
+    }
+}
 
 void limiteGB(){
     cout<<"De cuanto es tu consumo de GB de datos?"<<endl;
