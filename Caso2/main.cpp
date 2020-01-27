@@ -211,3 +211,4 @@ void limiteGB(){
 
     }
 }//Funcion terminada
+
