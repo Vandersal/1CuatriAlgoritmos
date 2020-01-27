@@ -7,12 +7,6 @@
 #IncludeRegexTransform: 
 
 C:/Users/ahira/Desktop/GitHub/1CuatriAlgoritmos/Caso2/main.cpp
-stdio.h
--
-wchar.h
--
-locale.h
--
-stdlib.h
+iostream
 -
 
