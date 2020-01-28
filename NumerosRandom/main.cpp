@@ -4,16 +4,23 @@
 
 using namespace std;
 
-int numero;
+int numero, x;
 
 void generarAleatorio(){
     srand(time(NULL));
-    numero = rand()%6;
+
+    for (x = 0; x < 6; ++x) {
+        numero = rand()%6;
+        cout<<"Aleatorio entre 0 a 6: "<<numero<<endl;
+        x = numero;
+    }
+    cout<<"Salio un: "<<x;
+
 }
 
 int main() {
     generarAleatorio();
-    cout<<"Aleatorio entre 0 a 6: "<<numero<<endl;
+
 
     return 0;
 }
