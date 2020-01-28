@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <ctime>
 
 
 using namespace std;
@@ -7,6 +9,8 @@ using namespace std;
 int opcionMenuPrincipal;
 int opcionInternet, dispositivosConectados, consumoGB, cantidadUsuarios, sumaDatos;
 int opcionDispo, opcionGB;
+string arreglo[5] = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes"};
+int diaMes;
 
 
 
@@ -20,6 +24,7 @@ void limiteDispositivos10GB();
 void limiteGB();
 
 int main() {
+    srand(time(NULL));
     menuPrincipal();
     return 0;
 }
@@ -102,7 +107,8 @@ void paqueteInternetCasa5GB(){
                 limiteGB();
             }
             if(opcionDispo == 2 && opcionGB == 2){
-                cout<<"Se le agendara una cita para que un tecnico visite su domicilio, muchas gracias"<<endl;
+                diaMes = rand()%30;
+                cout<<"Se le agendara una cita el dia: "<<arreglo[rand()%5]<<" "<<diaMes<<endl;
             }
         }
 
@@ -133,7 +139,8 @@ void paqueteInternetCasa10GB(){
                 limiteGB();
             }
             if(opcionDispo == 2 && opcionGB == 2){
-                cout<<"Se le agendara una cita para que un tecnico visite su domicilio, muchas gracias"<<endl;
+                diaMes = rand()%30;
+                cout<<"Se le agendara una cita el dia: "<<arreglo[rand()%5]<<" "<<diaMes<<endl;
             }
         }
 
