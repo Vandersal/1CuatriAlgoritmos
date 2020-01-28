@@ -11,6 +11,6 @@ iostream
 -
 stdlib.h
 -
-time.h
+ctime
 -
 

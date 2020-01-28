@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
 
 using  namespace std;
 
@@ -8,18 +8,19 @@ void dadosRand();
 void sumarPuntos();
 void tirarDados();
 
-int dado1, dado2, Tirada;
+int dado1 = 0, dado2 = 0, Tirada;
 int contadorPuntos;
 
 int main() {
+    srand(time(NULL));
     dadosRand();
     return 0;
 }
 
 void dadosRand(){
-    srand(time(NULL));
-    dado1 = 1 + rand() % (7-1);
-    dado2 = 1 + rand() % (7-1);
+    //srand(time(NULL));
+    dado1 = rand()%6;
+    dado2 = rand()%6;
     sumarPuntos();
     tirarDados();
 }
@@ -32,7 +33,7 @@ void sumarPuntos(){
 
 void tirarDados(){
     do{
-        sumarPuntos();
+        //sumarPuntos();
         if(Tirada == 7 | Tirada == 11){
             cout<<"Has ganado"<<endl;
             break;
