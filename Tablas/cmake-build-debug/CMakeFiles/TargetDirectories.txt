@@ -1,0 +1,3 @@
+C:/Users/ahira/Desktop/Tablas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahira/Desktop/Tablas/cmake-build-debug/CMakeFiles/Tablas.dir
+C:/Users/ahira/Desktop/Tablas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
