@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Arreglos.dir/main.cpp.o  -o Arreglos 

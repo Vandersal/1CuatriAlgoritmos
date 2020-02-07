@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Caso2.dir/main.cpp.obj"
-  "Caso2.exe"
-  "Caso2.exe.manifest"
+  "CMakeFiles/Caso2.dir/main.cpp.o"
+  "Caso2"
   "Caso2.pdb"
-  "libCaso2.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

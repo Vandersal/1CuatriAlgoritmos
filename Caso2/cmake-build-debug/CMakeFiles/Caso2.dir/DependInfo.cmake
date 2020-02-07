@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/ahira/Desktop/GitHub/1CuatriAlgoritmos/Caso2/main.cpp" "C:/Users/ahira/Desktop/GitHub/1CuatriAlgoritmos/Caso2/cmake-build-debug/CMakeFiles/Caso2.dir/main.cpp.obj"
+  "/home/vandersalaheram/Documentos/GitHub/1CuatriAlgoritmos/Caso2/main.cpp" "/home/vandersalaheram/Documentos/GitHub/1CuatriAlgoritmos/Caso2/cmake-build-debug/CMakeFiles/Caso2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
