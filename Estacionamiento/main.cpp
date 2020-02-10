@@ -8,7 +8,7 @@ void espaciosCero();
 void mostrarEspacios();
 void asignarEspacio();
 void liberarEspacio();
-void verificarEspacio();
+int verificarEspacio(int numero);
 
 using namespace std;
 
@@ -69,25 +69,20 @@ void espaciosCero(){
 
 void asignarEspacio(){
     int espacioEstacionamiento;
-    cout<<"Espacios totales"<<endl;
-    verificarEspacio();
-    cout<<"Ingrese el espacio deseado: ";
-    cin>>espacioEstacionamiento;
-    if(espacioEstacionamiento < 0 || espacioEstacionamiento >10){
-        cout<<"Error, espacio invalido "<<endl;
-        menu();
+    int indicador;
+   
+   do{
+       mostrarEspacios();
+       cout<<"Ingrese el espacio deseado: ";
+       cin>>espacioEstacionamiento;
 
-    } else{
-
-        if(espacio[espacioEstacionamiento -1] == 1){
-            cout<<"Error, espacio ocupado"<<endl;
-            menu();
-        } else{
-            espacio[espacioEstacionamiento-1] = 1;
-            cout<<"Espacio asginado!!"<<endl;
-        }
-    }
-
+   }while(espacioEstacionamiento <0 || espacioEstacionamiento>10);
+   indicador = verificarEspacio(espacioEstacionamiento);
+   if(indicador == 1){
+       espacio[espacioEstacionamiento -1] = 1;
+   }else{
+       cout<<"Ya esta ocupado"<<endl;
+   }
 
 }
 
@@ -103,20 +98,21 @@ void liberarEspacio(){
 
 void mostrarEspacios(){
     cout<<"\n";
-    for (int i = 0; i <10 ; ++i) {
-        if (espacio[i] == 1){
-            cout<<"Espacio "<<i+1<<" se encuentra ocupado "<<endl;
-        }
-    }
-    cout<<"\n ";
-    verificarEspacio();
-    cout<<"\n";
-}
-
-void verificarEspacio(){
     for (int i = 0; i <10; ++i) {
         if(espacio[i] == 0){
             cout<<"Se cuenta con el espacio "<<i+1<<endl;
+        } else{
+            cout<<"Espacio "<<i+1<<" se encuentra ocupado "<<endl;
         }
     }
+    cout<<"\n";
+}
+
+int verificarEspacio(int numero){
+    int indicador = 2; //1= disponible 2- No disponible
+        if(espacio[numero -1] == 0){
+            cout<<"Disponible"<<endl;
+            indicador = 1;
+        }
+    return indicador;
 }
