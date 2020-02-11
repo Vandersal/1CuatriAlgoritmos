@@ -8,6 +8,7 @@ void mostrarEspacios();
 void asignarEspacio();
 void liberarEspacio();
 bool verificarEspacio(int numero, int valor);
+void validarNumero(int espacioEstacionamiento);
 
 using namespace std;
 
@@ -71,14 +72,12 @@ void asignarEspacio(){
     int espacioEstacionamiento;
     bool respuesta;
 
-   do{
-       mostrarEspacios();
-       cout<<"Ingrese el espacio deseado: ";
-       cin>>espacioEstacionamiento;
+    mostrarEspacios();
+    cout<<"Ingrese el espacio deseado: ";
+    cin>>espacioEstacionamiento;
 
-   }while(espacioEstacionamiento <0 || espacioEstacionamiento>10);
-
-   respuesta=verificarEspacio(espacioEstacionamiento, 0);
+    validarNumero(espacioEstacionamiento);
+    respuesta=verificarEspacio(espacioEstacionamiento, 0);
 
    if(respuesta == true){
        espacio[espacioEstacionamiento -1] = 1;
@@ -90,11 +89,10 @@ void asignarEspacio(){
 
 void liberarEspacio(){
     int lugar;
-    do{
-        cout<<"Indica el espacio a liberar"<<endl;
-        mostrarEspacios();
-        cin>>lugar;
-    }while (lugar <1 || lugar > 10);
+    cout<<"Indica el espacio a liberar"<<endl;
+    mostrarEspacios();
+    cin>>lugar;
+    validarNumero(lugar);
     espacio[lugar-1] = 0;
 }
 
@@ -117,4 +115,13 @@ bool verificarEspacio(int numero, int valor){
 
         }
     return respuesta;
+}
+
+void validarNumero(int espacioEstacionamiento){
+
+    while (espacioEstacionamiento <1 || espacioEstacionamiento >10){
+        cout << "Ingrese de nuevo" << endl;
+        cin >> espacioEstacionamiento;
+    }
+
 }
