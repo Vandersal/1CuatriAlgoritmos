@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 int espacio[10];
 
 int menu();
@@ -8,11 +7,12 @@ void espaciosCero();
 void mostrarEspacios();
 void asignarEspacio();
 void liberarEspacio();
-int verificarEspacio(int numero);
+bool verificarEspacio(int numero, int valor);
 
 using namespace std;
 
 int main() {
+
     int opcion;
 
     espaciosCero();
@@ -69,7 +69,7 @@ void espaciosCero(){
 
 void asignarEspacio(){
     int espacioEstacionamiento;
-    int indicador;
+    bool respuesta;
 
    do{
        mostrarEspacios();
@@ -77,8 +77,10 @@ void asignarEspacio(){
        cin>>espacioEstacionamiento;
 
    }while(espacioEstacionamiento <0 || espacioEstacionamiento>10);
-   indicador = verificarEspacio(espacioEstacionamiento);
-   if(indicador == 1){
+
+   respuesta=verificarEspacio(espacioEstacionamiento, 0);
+
+   if(respuesta == true){
        espacio[espacioEstacionamiento -1] = 1;
    }else{
        cout<<"Ya esta ocupado"<<endl;
@@ -108,11 +110,11 @@ void mostrarEspacios(){
     cout<<"\n";
 }
 
-int verificarEspacio(int numero){
-    int indicador = 2; //1= disponible 2- No disponible
-        if(espacio[numero -1] == 0){
-            cout<<"Disponible"<<endl;
-            indicador = 1;
+bool verificarEspacio(int numero, int valor){
+    bool respuesta = false;
+        if(espacio[numero -1] == valor){
+            respuesta = true;
+
         }
-    return indicador;
+    return respuesta;
 }
