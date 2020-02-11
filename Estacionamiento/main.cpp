@@ -70,7 +70,7 @@ void espaciosCero(){
 void asignarEspacio(){
     int espacioEstacionamiento;
     int indicador;
-   
+
    do{
        mostrarEspacios();
        cout<<"Ingrese el espacio deseado: ";
