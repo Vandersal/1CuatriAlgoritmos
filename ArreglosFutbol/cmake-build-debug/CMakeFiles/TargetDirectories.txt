@@ -1,0 +1,3 @@
+C:/Users/ahira/1CuatriAlgoritmos/ArreglosFutbol/cmake-build-debug/CMakeFiles/ArreglosFutbol.dir
+C:/Users/ahira/1CuatriAlgoritmos/ArreglosFutbol/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahira/1CuatriAlgoritmos/ArreglosFutbol/cmake-build-debug/CMakeFiles/rebuild_cache.dir

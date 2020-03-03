@@ -1,0 +1,3 @@
+C:/Users/ahira/1CuatriAlgoritmos/Practica.Arreglos/cmake-build-debug/CMakeFiles/Practica_Arreglos.dir
+C:/Users/ahira/1CuatriAlgoritmos/Practica.Arreglos/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahira/1CuatriAlgoritmos/Practica.Arreglos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
