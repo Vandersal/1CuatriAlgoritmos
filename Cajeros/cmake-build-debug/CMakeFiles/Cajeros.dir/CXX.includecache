@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/ahira/Documents/1CuatriAlgoritmos/Cajeros/main.cpp
+iostream
+-
+fstream
+-
+stdbool.h
+-
+
